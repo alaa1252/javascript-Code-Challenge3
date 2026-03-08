@@ -183,3 +183,81 @@ console.log(el)
 el=el.parentElement
 }
 }
+
+// e section 
+
+function task33(){
+const li=document.createElement("li")
+li.textContent="New Item"
+document.getElementById("list").appendChild(li)
+}
+
+function task34(){
+const btn=document.createElement("button")
+btn.textContent="Dynamic Button"
+
+btn.onclick=function(){
+alert("Dynamic button clicked")
+}
+
+document.body.appendChild(btn)
+}
+
+function task35(){
+const div=document.createElement("div")
+const title=document.createElement("h3")
+const p=document.createElement("p")
+
+title.textContent="Title"
+p.textContent="Paragraph"
+
+div.appendChild(title)
+div.appendChild(p)
+
+document.body.appendChild(div)
+}
+
+function task36(){
+const input=document.createElement("input")
+const ref=document.getElementById("playground")
+
+document.body.insertBefore(input,ref)
+}
+
+function task37(){
+const el=document.createElement("div")
+el.textContent="Prepended"
+document.body.prepend(el)
+}
+
+function task38(){
+const msg=document.createElement("div")
+msg.textContent="Notification"
+
+document.body.appendChild(msg)
+
+setTimeout(()=>{
+msg.remove()
+},3000)
+}
+
+function task39(){
+const card=document.createElement("div")
+
+card.innerHTML=`
+<img src="https://via.placeholder.com/100">
+<h3>Title</h3>
+<p>Description</p>
+<button>Buy</button>
+`
+
+document.body.appendChild(card)
+}
+
+function task40(){
+const el=document.getElementById("list")
+const clone=el.cloneNode(true)
+
+document.body.appendChild(clone)
+}
+
