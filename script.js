@@ -143,3 +143,43 @@ alert("Enter pressed")
 }
 })
 }
+
+//d section
+
+function task27(){
+const btn=document.querySelector("button")
+console.log(btn.parentElement)
+}
+
+function task28(){
+const ul=document.getElementById("list")
+console.log(ul.children)
+}
+
+function task29(){
+const el=document.querySelector("#list li")
+console.log(el.nextElementSibling)
+}
+
+function task30(){
+const p=document.querySelectorAll("p")[1]
+console.log(p.previousElementSibling)
+}
+
+function task31(){
+document.querySelectorAll("#list li").forEach(li=>{
+li.onclick=function(){
+console.log(this.parentElement)
+console.log(this.parentElement.children)
+}
+})
+}
+
+function task32(){
+let el=document.querySelector("#list li")
+
+while(el){
+console.log(el)
+el=el.parentElement
+}
+}
