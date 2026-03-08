@@ -84,4 +84,62 @@ function task16(){
 document.getElementById("image").src="https://via.placeholder.com/200"
 }
 
+// c section
 
+function task17(){
+alert("Button clicked!")
+}
+
+function task18(){
+document.getElementById("playground").style.background="lightblue"
+}
+
+function task19(){
+const img=document.getElementById("image")
+img.style.width="250px"
+
+setTimeout(()=>{
+img.style.width="150px"
+},1000)
+}
+
+function task20(){
+const input=document.getElementById("username")
+console.log(input.value)
+}
+
+function task21(){
+event.preventDefault()
+console.log("Form prevented reload")
+}
+
+function task22(){
+document.querySelectorAll("#list li").forEach(li=>{
+li.onclick=function(){
+this.style.background="yellow"
+}
+})
+}
+
+function task23(){
+event.target.disabled=true
+}
+
+function task24(){
+const p=document.querySelector("p")
+p.style.fontWeight="bold"
+}
+
+function task25(){
+document.body.onclick=function(e){
+console.log(e.target)
+}
+}
+
+function task26(){
+document.addEventListener("keydown",function(e){
+if(e.key==="Enter"){
+alert("Enter pressed")
+}
+})
+}
