@@ -48,4 +48,40 @@ const el=document.getElementById("title")
 console.log(el.tagName)
 }
 
+// b section.
+
+function task9(){
+document.getElementById("heading").textContent="Welcome to DOM!"
+}
+
+function task10(){
+document.getElementById("playground").innerHTML="<strong>Hello</strong>"
+}
+
+function task11(){
+document.querySelector("button").style.background="yellow"
+}
+
+function task12(){
+document.querySelectorAll("p").forEach(p=>{
+p.style.fontSize="20px"
+})
+}
+
+function task13(){
+document.getElementById("heading").classList.add("active")
+}
+
+function task14(){
+document.getElementById("heading").classList.toggle("active")
+}
+
+function task15(){
+document.getElementById("heading").style.display="none"
+}
+
+function task16(){
+document.getElementById("image").src="https://via.placeholder.com/200"
+}
+
 
