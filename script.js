@@ -261,3 +261,88 @@ const clone=el.cloneNode(true)
 document.body.appendChild(clone)
 }
 
+// f section
+
+function task41(){
+const li=document.createElement("li")
+li.textContent="Todo Item"
+
+const del=document.createElement("button")
+del.textContent="Delete"
+
+del.onclick=function(){
+li.remove()
+}
+
+li.appendChild(del)
+
+document.getElementById("list").appendChild(li)
+}
+
+function task42(){
+const textarea=document.getElementById("textarea")
+const counter=document.getElementById("counter")
+
+counter.textContent=textarea.value.length+" chars"
+}
+
+function task43(){
+document.querySelectorAll("#list li").forEach(li=>{
+li.onclick=function(){
+document.querySelectorAll("#list li").forEach(el=>{
+el.classList.remove("selected")
+})
+this.classList.add("selected")
+}
+})
+}
+
+function task44(){
+const menu=document.getElementById("list")
+menu.style.display = menu.style.display==="none" ? "block" : "none"
+}
+
+function task45(){
+document.body.classList.toggle("dark")
+}
+
+function task46(){
+const data=[
+{name:"Apple",price:3},
+{name:"Banana",price:2}
+]
+
+const table=document.createElement("table")
+
+data.forEach(item=>{
+const row=document.createElement("tr")
+
+row.innerHTML=`<td>${item.name}</td><td>${item.price}</td>`
+
+table.appendChild(row)
+})
+
+document.body.appendChild(table)
+}
+
+function task47(){
+alert("Product clicked → show details")
+}
+
+function task48(){
+const img=document.getElementById("image")
+img.src="https://via.placeholder.com/"+(Math.random()*200+100)
+}
+
+function task49(){
+const input=document.getElementById("username")
+
+if(input.value===""){
+input.style.border="3px solid red"
+}
+}
+
+function task50(){
+const p=document.querySelector("p")
+p.style.display=p.style.display==="none"?"block":"none"
+}
