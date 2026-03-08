@@ -108,8 +108,8 @@ const input=document.getElementById("username")
 console.log(input.value)
 }
 
-function task21(){
-event.preventDefault()
+function task21(e){
+e.preventDefault()
 console.log("Form prevented reload")
 }
 
@@ -121,8 +121,8 @@ this.style.background="yellow"
 })
 }
 
-function task23(){
-event.target.disabled=true
+function task23(e){
+e.target.disabled=true
 }
 
 function task24(){
@@ -345,4 +345,39 @@ input.style.border="3px solid red"
 function task50(){
 const p=document.querySelector("p")
 p.style.display=p.style.display==="none"?"block":"none"
+}
+
+
+// bonus
+
+let clicks=0
+function task51(){
+clicks++
+alert("Clicks: "+clicks)
+}
+
+function task52(){
+const input=document.getElementById("username")
+
+const li=document.createElement("li")
+li.textContent=input.value
+
+li.onclick=function(){
+li.style.textDecoration="line-through"
+}
+
+document.getElementById("list").appendChild(li)
+}
+
+function task53(){
+let size=100
+
+setInterval(()=>{
+size+=5
+document.getElementById("image").style.width=size+"px"
+},500)
+}
+
+function task54(){
+alert("Tab system example")
 }
